@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqhagj1sq2qv3"]
+
+[sub_resource type="GDScript" id="GDScript_h0e0j"]
+script/source = "extends Node2D
+
+
+
+
+func _on_button_2_pressed():
+	get_tree().quit()
+
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file(\"res://world.tscn\")
+"
+
+[node name="Main" type="Node2D"]
+script = SubResource("GDScript_h0e0j")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 119.0
+offset_top = 91.0
+offset_right = 324.0
+offset_bottom = 219.0
+text = "play"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 132.0
+offset_top = 265.0
+offset_right = 337.0
+offset_bottom = 393.0
+text = "quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

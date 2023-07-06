@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://di08w6082kayj"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_a3j3i"]
+[ext_resource type="PackedScene" uid="uid://0fq0u4h0nrec" path="res://player.tscn" id="2_syfan"]
+[ext_resource type="PackedScene" uid="uid://cq18rghrw0c1" path="res://mappa.tscn" id="3_f351p"]
+
+[node name="world" type="Node2D"]
+scale = Vector2(0.875136, 0.821669)
+script = ExtResource("1_a3j3i")
+
+[node name="mappa" parent="." instance=ExtResource("3_f351p")]
+position = Vector2(621, 459)
+
+[node name="player" parent="." instance=ExtResource("2_syfan")]
+position = Vector2(86, 85)
+scale = Vector2(2.60855, 1.40225)
